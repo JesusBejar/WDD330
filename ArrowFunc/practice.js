@@ -12,13 +12,13 @@ let sum2 = (a, b) =>
 // simple and shorter arrow function 
 let sum3 = (a, b) => a + b
 
-// normal function
-function isNegative (negative) 
+// simple function
+function isNegative(num)
 {
-    return number <= 0 
+    return num <= 0 
 }
-// arrow function
-let isNegative2 = (negative) => number <= 0 
+// arrow function alternative
+let isNegative2 = (num) => num<=0
 
 // normal function
 function ranNum ()
