@@ -11,23 +11,27 @@
         <h1>Find the lyrics to your favorite songs here :)</h1>
     </header>
     <main>
-        <label for="artist-name">Artist Name</label>
-        <input type="text" name="artist-name" id="artist-name" required>
-
-        <label for="song-name">Song Name</label>
-        <input type="text" name="song-name" id="song-name" required>
-
-        <input type="submit" name="submit" id="submit-button">
-
-        <h3>Lyrics:</h3>
-        <h3 id="lyrics-section"></h3>
-
-        <h2>Recommendations for you:</h2>
-        <p>(based on your search results)</p>
-        <h3 id="recommended-section"></h3>
-
-        <h2>Saved songs:</h2>
-        <h3 id="saved-songs-section"></h3>
+        <section id="middle">
+            <label for="artist-name">Artist Name</label>
+            <input type="text" name="artist-name" id="artist-name" required>
+    
+            <label for="song-name">Song Name</label>
+            <input type="text" name="song-name" id="song-name" required>
+    
+            <input type="submit" name="submit" id="submit-button">
+    
+            <h3>Lyrics:</h3>
+            <h3 id="lyrics-section"></h3>
+        </section>
+        <section id="left">
+            <h2>Recommendations for you:</h2>
+            <p>(based on your search results)</p>
+            <h3 id="recommended-section"></h3>
+        </section>
+        <section id="right">
+            <h2>Saved songs:</h2>
+            <h3 id="saved-songs-section"></h3>
+        </section>
     </main>
 </body>
 </html>
