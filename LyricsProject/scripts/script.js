@@ -6,3 +6,12 @@ const options = {
 		'X-RapidAPI-Host': 'genius-song-lyrics1.p.rapidapi.com'
 	}
 };
+let lyricsSection = document.querySelector("lyrics-section");
+
+try {
+	const response = await fetch(url, options);
+	const result = await response.text();
+	lyricsSection.innerHTML = result;
+} catch (error) {
+	console.error(error);
+}
