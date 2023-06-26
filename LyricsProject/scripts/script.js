@@ -8,10 +8,16 @@ const options = {
 };
 let lyricsSection = document.querySelector("lyrics-section");
 
-try {
+async function getLyrics() {
+  try {
 	const response = await fetch(url, options);
 	const result = await response.text();
+  console.log("hola");
+  console.log(result);
 	lyricsSection.innerHTML = result;
+  console.log("bye bye");
 } catch (error) {
-	console.error(error);
-}
+	console.log(error);
+  }
+};
+getLyrics();
