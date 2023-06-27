@@ -1,4 +1,8 @@
-const url = 'https://genius-song-lyrics1.p.rapidapi.com/search/?q=thunderstruck&per_page=10&page=1';
+// the function below returns song id
+// input q string
+// output song id
+async function returnSongId() {
+	const url = 'https://genius-song-lyrics1.p.rapidapi.com/search/?q=thunderstruck&per_page=10&page=1';
 const options = {
 	method: 'GET',
 	headers: {
@@ -8,16 +12,15 @@ const options = {
 };
 let lyricsSection = document.querySelector("lyrics-section");
 
-async function getLyrics() {
   try {
 	const response = await fetch(url, options);
-	const result = await response.text();
-  console.log("hola");
-  console.log(result);
-	lyricsSection.innerHTML = result;
-  console.log("bye bye");
+	console.log(response);
+	// .json converts response to json!
+	const result = await response.json();
+	// console.log(result.hits[0].result.id);
+	return result.hits[0].result.id;
 } catch (error) {
 	console.log(error);
   }
 };
-getLyrics();
+returnSongId();
