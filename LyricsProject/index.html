@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>             
+    <title>Lyrics Project</title>             
 </head>
 <body>
     <header>
         <h1>Find the lyrics to your favorite songs here :)</h1>
     </header>
     <main>
+        <!-- main SECTION  -->
         <section id="middle">
             <label for="artist-name">Artist Name</label>
             <input type="text" name="artist-name" id="artist-name" required>
@@ -21,18 +22,23 @@
             <button id="submit-button">Find lyrics</button>
     
             <h3>Lyrics:</h3>
+            <!-- where the lyrics are displayed -->
             <h3 id="lyrics-section"></h3>
         </section>
+        <!-- recommended songs SECTION -->
         <section id="left">
             <h2>Recommendations for you:</h2>
             <p>(based on your search results)</p>
+            <!-- where recommendations are displayed -->
             <h3 id="recommended-section"></h3>
         </section>
+        <!-- saved songs SECTION -->
         <section id="right">
             <h2>Saved songs:</h2>
+            <!-- where saved songs are displayed -->
             <h3 id="saved-songs-section"></h3>
         </section>
     </main>
-    <script scr="scripts/script.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
 </html>
