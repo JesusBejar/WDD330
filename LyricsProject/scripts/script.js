@@ -25,6 +25,10 @@ let lyricsSection = document.querySelector("lyrics-section");
 };
 returnSongId();
 
+// the function below returns song lyrics
+// input song id
+// output song lyrics
+// be sure to add songId as a parameter and this -> ${songId}
 async function returnSongLyrics(songId) {
 	// 2396871
 	const url = 'https://genius-song-lyrics1.p.rapidapi.com/song/lyrics/?id=291696';
@@ -51,3 +55,23 @@ async function returnSongLyrics(songId) {
 }
 
 returnSongLyrics();
+// function lyricsCard(lyricData) {
+// 	const lyricsSection = document.querySelector("lyrics-section");
+// 	lyricsSection.innerHTML = `<p>${lyricData}</p>`;
+// 	return lyricsSection;
+// }
+// lyricsCard(returnSongLyrics(291696));
+
+// export default async function productCardTemplate(product) {
+//     return `<li class="product-card">
+//     <a href="../product_pages/index.html?product=${product.Id}">
+//     <img
+//       src="${product.Image}"
+//       alt="Image of ${product.Name}"
+//     />
+//     <h3 class="card__brand">${product.Brand.Name}</h3>
+//     <h2 class="card__name">${product.NameWithoutBrand}</h2>
+//     <p class="product-card__price">$${product.FinalPrice}</p></a>
+//   </li>`;
+// }
+// document.querySelector("#productName").innerText = product.Brand.Name;
